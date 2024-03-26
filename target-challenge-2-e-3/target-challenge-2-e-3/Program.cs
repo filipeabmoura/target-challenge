@@ -9,17 +9,17 @@ Esse número pode ser informado através de qualquer entrada de sua preferência
  * */
 
 string? numeroEntrada;
-int numero;
+long numero;
 
-int anteriorUltimo = 0;
-int anteriorPenultimo = 1;
-int atual = 0;
+long anteriorUltimo = 0;
+long anteriorPenultimo = 1;
+long atual = 0;
 
 Console.WriteLine("Digite um número abaixo e descubra se ele faz parte da sequência de Fibonacci");
 Console.Write(">> ");
 numeroEntrada = Console.ReadLine();
 
-numero = int.Parse(numeroEntrada);
+numero = long.Parse(numeroEntrada);
 
 while (atual < numero)
 {
@@ -34,13 +34,12 @@ while (atual < numero)
         Console.WriteLine($"SIM! {numero} faz parte da sequência de Fibonacci.");
         break;
     }
-
-    if(atual > numero)
-    {
-        Console.WriteLine($"NÃO! {numero} não faz parte da sequência de Fibonacci.");
-        break;
-    }
     
+}
+
+if (atual > numero)
+{
+    Console.WriteLine($"NÃO! {numero} não faz parte da sequência de Fibonacci.");
 }
 
 //------------------------------- FIM DA 2 / INÍCIO DA 3 ---------------------------------------
